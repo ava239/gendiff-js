@@ -1,8 +1,15 @@
 import fs from 'fs';
 import _ from 'lodash';
+import path from 'path';
 import format from './format.js';
+import parseData from './parsers.js';
 
-const getFileData = (filepath) => fs.readFileSync(filepath, 'utf8');
+const getFileData = (filepath) => {
+  const contents = fs.readFileSync(filepath, 'utf8');
+  const fileType = path.extname(filepath).substr(1);
+
+  return { contents, fileType };
+};
 
 const getDiff = (object1, object2) => {
   const keys1 = Object.keys(object1);
@@ -38,8 +45,8 @@ const compareFiles = (filepath1, filepath2) => {
   const fileData1 = getFileData(filepath1);
   const fileData2 = getFileData(filepath2);
 
-  const data1 = JSON.parse(fileData1);
-  const data2 = JSON.parse(fileData2);
+  const data1 = parseData(fileData1.contents, fileData1.fileType);
+  const data2 = parseData(fileData2.contents, fileData2.fileType);
 
   const diff = getDiff(data1, data2);
 

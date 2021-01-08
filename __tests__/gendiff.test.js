@@ -16,3 +16,12 @@ test('flat json', () => {
 
   expect(gendiff(filepath1, filepath2)).toEqual(expectedResult);
 });
+
+test('flat yml', () => {
+  const filepath1 = getFixturePath('file1.yml');
+  const filepath2 = getFixturePath('file2.yml');
+  const resultPath = getFixturePath('output');
+  const expectedResult = read(resultPath);
+
+  expect(gendiff(filepath1, filepath2)).toEqual(expectedResult);
+});

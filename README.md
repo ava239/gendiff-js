@@ -7,3 +7,6 @@
 
 ## flat json compare
 [![asciicast](https://asciinema.org/a/ZUQtylQMAklk65uGqdAyqPU8r.svg)](https://asciinema.org/a/ZUQtylQMAklk65uGqdAyqPU8r)
+
+## flat yml compare
+[![asciicast](https://asciinema.org/a/23rAqPmSpuRq6IsTZNVUvwNin.svg)](https://asciinema.org/a/23rAqPmSpuRq6IsTZNVUvwNin)
