@@ -7,7 +7,18 @@ const operations = {
   removed: '- ',
 };
 const getIndent = (depth) => indentStep.repeat(depth);
-const formatMessage = (key, operation, value, depth) => `  ${getIndent(depth)}${operation}${key}: ${value}`;
+const stringify = (value, depth) => {
+  if (!_.isPlainObject(value)) {
+    return value;
+  }
+
+  const obj = Object.keys(value)
+    .map((key) => `${getIndent(depth + 1)}${key}: ${stringify(value[key], depth + 1)}`)
+    .join('\n');
+
+  return ['{', obj, `${getIndent(depth)}}`].join('\n');
+};
+const formatMessage = (key, operation, value, depth) => `  ${getIndent(depth)}${operation}${key}: ${stringify(value, depth + 1)}`;
 
 const format = (diffData) => {
   const iter = (diff, depth = 0) => _.map(
@@ -24,6 +35,12 @@ const format = (diffData) => {
           return formatMessage(node.key, operations[node.type], node.oldValue, depth);
         case 'added':
           return formatMessage(node.key, operations[node.type], node.newValue, depth);
+        case 'complex':
+          return [
+            `${getIndent(depth + 1)}${node.key}: {`,
+            iter(node.children, depth + 1),
+            `${getIndent(depth + 1)}}`,
+          ];
         default:
           throw new Error(`Unknown node type: '${node.type}'`);
       }

@@ -10,3 +10,6 @@
 
 ## flat yml compare
 [![asciicast](https://asciinema.org/a/23rAqPmSpuRq6IsTZNVUvwNin.svg)](https://asciinema.org/a/23rAqPmSpuRq6IsTZNVUvwNin)
+
+## nested data compare
+[![asciicast](https://asciinema.org/a/MDsDJWM6E4VkPBDuFYg64R3dm.svg)](https://asciinema.org/a/MDsDJWM6E4VkPBDuFYg64R3dm)
