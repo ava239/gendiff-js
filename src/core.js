@@ -1,7 +1,7 @@
 import fs from 'fs';
 import _ from 'lodash';
 import path from 'path';
-import format from './formatters.js';
+import format from './formatters/index.js';
 import parseData from './parsers.js';
 
 const getFileData = (filepath) => {
@@ -45,7 +45,7 @@ const getDiff = (object1, object2) => {
   });
 };
 
-const compareFiles = (filepath1, filepath2, outputFormat = 'stylish') => {
+const compareFiles = (filepath1, filepath2, formatName = 'stylish') => {
   const fileData1 = getFileData(filepath1);
   const fileData2 = getFileData(filepath2);
 
@@ -54,7 +54,7 @@ const compareFiles = (filepath1, filepath2, outputFormat = 'stylish') => {
 
   const diff = getDiff(data1, data2);
 
-  return format(diff, outputFormat);
+  return format(diff, formatName);
 };
 
 export default compareFiles;

@@ -1,14 +1,14 @@
 import YAML from 'yaml';
 
-const parseData = (data, format) => {
-  switch (format) {
+const parseData = (data, fileType) => {
+  switch (fileType) {
     case 'json':
       return JSON.parse(data);
     case 'yml':
     case 'yaml':
       return YAML.parse(data);
     default:
-      throw new Error(`Unsupported file extension: ${format}`);
+      throw new Error(`Unsupported file extension: ${fileType}`);
   }
 };
 
