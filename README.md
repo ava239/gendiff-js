@@ -10,3 +10,6 @@
 
 ## plain output format
 [![asciicast](https://asciinema.org/a/LbYmQiJVl30ZnICQY58uIUQBO.svg)](https://asciinema.org/a/LbYmQiJVl30ZnICQY58uIUQBO)
+
+## json output format
+[![asciicast](https://asciinema.org/a/bKmwBFJPerb5rDUhhzLbCebLG.svg)](https://asciinema.org/a/bKmwBFJPerb5rDUhhzLbCebLG)

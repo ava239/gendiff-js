@@ -11,6 +11,7 @@ const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', 
 const formatNames = [
   ['stylish'],
   ['plain'],
+  ['json'],
 ];
 
 describe.each(formatNames)('%s formatter', (formatName) => {
