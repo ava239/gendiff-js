@@ -1,8 +1,6 @@
 {
   "name": "@hexlet/code",
-  "version": "1.0.0",
-  "description": "gendiff",
-  "main": "bin/gendiff.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "npx jest"
