@@ -14,7 +14,7 @@ const getFileData = (filepath) => {
 const getDiff = (object1, object2) => {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
-  const allKeys = _.union(keys1, keys2).sort();
+  const allKeys = _.sortBy(_.union(keys1, keys2));
 
   return allKeys.map((key) => {
     const oldValue = _.get(object1, key);
