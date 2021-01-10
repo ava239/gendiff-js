@@ -15,13 +15,8 @@ const formatNames = [
 ];
 
 describe.each(formatNames)('%s formatter', (formatName) => {
-  let expectedResult;
-
-  beforeAll(() => {
-    const resultPath = getFixturePath(`${formatName}.output`);
-    // eslint-disable-next-line
-    expectedResult = read(resultPath);
-  });
+  const resultPath = getFixturePath(`${formatName}.output`);
+  const expectedResult = read(resultPath);
 
   test('json', () => {
     const filepath1 = getFixturePath('file1.json');
