@@ -5,6 +5,8 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/4fed7f6572ae0a06f540/maintainability)](https://codeclimate.com/github/ava239/frontend-project-lvl2/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/4fed7f6572ae0a06f540/test_coverage)](https://codeclimate.com/github/ava239/frontend-project-lvl2/test_coverage)
 
+Same project as https://github.com/ava239/gendiff but written on JS. For additional info check its readme.
+
 ## stylish output format
 [![asciicast](https://asciinema.org/a/MDsDJWM6E4VkPBDuFYg64R3dm.svg)](https://asciinema.org/a/MDsDJWM6E4VkPBDuFYg64R3dm)
 
